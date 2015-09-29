@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
-
+#import "DataSource.h"
 @interface ViewController ()<NSUserActivityDelegate>
-
+{
+    DataSource *data;
+}
 @end
 
 @implementation ViewController
@@ -18,6 +20,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self createActivity];
+    
+    data = [[DataSource alloc] init];
+    [data initDataSource];
+    [data saveData];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,5 +58,10 @@
     NSLog(@"updateUserActivityState");
     [activity addUserInfoEntriesFromDictionary:@{@"user":@"123"}];
     [activity needsSave];
+}
+-(void)showDetailWithName:(NSString *)name
+{
+    Person *person = [data searchPersonWithName:name];
+    NSLog(@"%@",person);
 }
 @end

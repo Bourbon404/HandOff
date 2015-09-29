@@ -10,6 +10,9 @@
 		9F0639261BBA634A000317B6 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0639251BBA634A000317B6 /* ShareViewController.m */; };
 		9F0639291BBA634A000317B6 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0639271BBA634A000317B6 /* MainInterface.storyboard */; };
 		9F06392D1BBA634A000317B6 /* Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9F0639221BBA634A000317B6 /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9F0639441BBA7F21000317B6 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0639431BBA7F21000317B6 /* DataSource.m */; settings = {ASSET_TAGS = (); }; };
+		9F0639471BBA7F36000317B6 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0639461BBA7F36000317B6 /* Person.m */; settings = {ASSET_TAGS = (); }; };
+		9F0639491BBA7FD0000317B6 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F0639481BBA7FD0000317B6 /* 1.png */; settings = {ASSET_TAGS = (); }; };
 		9FEAD6121BBA34D4002FB804 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAD6111BBA34D4002FB804 /* main.m */; };
 		9FEAD6151BBA34D4002FB804 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAD6141BBA34D4002FB804 /* AppDelegate.m */; };
 		9FEAD6181BBA34D4002FB804 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEAD6171BBA34D4002FB804 /* ViewController.m */; };
@@ -48,6 +51,12 @@
 		9F0639251BBA634A000317B6 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		9F0639281BBA634A000317B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9F06392A1BBA634A000317B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F0639361BBA6E4B000317B6 /* Spotlight.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spotlight.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0639421BBA7F21000317B6 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		9F0639431BBA7F21000317B6 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		9F0639451BBA7F36000317B6 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		9F0639461BBA7F36000317B6 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		9F0639481BBA7FD0000317B6 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		9FEAD60D1BBA34D4002FB804 /* HandOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FEAD6111BBA34D4002FB804 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9FEAD6131BBA34D4002FB804 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +71,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		9F06391F1BBA634A000317B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F0639331BBA6E4B000317B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -103,6 +119,7 @@
 			children = (
 				9FEAD60D1BBA34D4002FB804 /* HandOff.app */,
 				9F0639221BBA634A000317B6 /* Share.appex */,
+				9F0639361BBA6E4B000317B6 /* Spotlight.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,7 +131,12 @@
 				9FEAD6141BBA34D4002FB804 /* AppDelegate.m */,
 				9FEAD6161BBA34D4002FB804 /* ViewController.h */,
 				9FEAD6171BBA34D4002FB804 /* ViewController.m */,
+				9F0639421BBA7F21000317B6 /* DataSource.h */,
+				9F0639431BBA7F21000317B6 /* DataSource.m */,
+				9F0639481BBA7FD0000317B6 /* 1.png */,
 				9FEAD6191BBA34D4002FB804 /* Main.storyboard */,
+				9F0639451BBA7F36000317B6 /* Person.h */,
+				9F0639461BBA7F36000317B6 /* Person.m */,
 				9FEAD61C1BBA34D4002FB804 /* Assets.xcassets */,
 				9FEAD61E1BBA34D4002FB804 /* LaunchScreen.storyboard */,
 				9FEAD6211BBA34D4002FB804 /* Info.plist */,
@@ -151,6 +173,23 @@
 			productReference = 9F0639221BBA634A000317B6 /* Share.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		9F0639351BBA6E4B000317B6 /* Spotlight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F0639411BBA6E4B000317B6 /* Build configuration list for PBXNativeTarget "Spotlight" */;
+			buildPhases = (
+				9F0639321BBA6E4B000317B6 /* Sources */,
+				9F0639331BBA6E4B000317B6 /* Frameworks */,
+				9F0639341BBA6E4B000317B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spotlight;
+			productName = Spotlight;
+			productReference = 9F0639361BBA6E4B000317B6 /* Spotlight.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9FEAD60C1BBA34D4002FB804 /* HandOff */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FEAD6241BBA34D4002FB804 /* Build configuration list for PBXNativeTarget "HandOff" */;
@@ -182,6 +221,9 @@
 					9F0639211BBA634A000317B6 = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
+					9F0639351BBA6E4B000317B6 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
 					9FEAD60C1BBA34D4002FB804 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -202,6 +244,7 @@
 			targets = (
 				9FEAD60C1BBA34D4002FB804 /* HandOff */,
 				9F0639211BBA634A000317B6 /* Share */,
+				9F0639351BBA6E4B000317B6 /* Spotlight */,
 			);
 		};
 /* End PBXProject section */
@@ -215,11 +258,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F0639341BBA6E4B000317B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FEAD60B1BBA34D4002FB804 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9FEAD6201BBA34D4002FB804 /* LaunchScreen.storyboard in Resources */,
+				9F0639491BBA7FD0000317B6 /* 1.png in Resources */,
 				9FEAD61D1BBA34D4002FB804 /* Assets.xcassets in Resources */,
 				9FEAD61B1BBA34D4002FB804 /* Main.storyboard in Resources */,
 			);
@@ -236,12 +287,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F0639321BBA6E4B000317B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FEAD6091BBA34D4002FB804 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9FEAD6181BBA34D4002FB804 /* ViewController.m in Sources */,
 				9FEAD6151BBA34D4002FB804 /* AppDelegate.m in Sources */,
+				9F0639471BBA7F36000317B6 /* Person.m in Sources */,
+				9F0639441BBA7F21000317B6 /* DataSource.m in Sources */,
 				9FEAD6121BBA34D4002FB804 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +361,28 @@
 				INFOPLIST_FILE = Share/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.bourbonz.HandOff.Share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9F06393F1BBA6E4B000317B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9F0639401BBA6E4B000317B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -420,6 +502,16 @@
 				9F06392F1BBA634A000317B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F0639411BBA6E4B000317B6 /* Build configuration list for PBXNativeTarget "Spotlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F06393F1BBA6E4B000317B6 /* Debug */,
+				9F0639401BBA6E4B000317B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9FEAD6081BBA34D4002FB804 /* Build configuration list for PBXProject "HandOff" */ = {
 			isa = XCConfigurationList;

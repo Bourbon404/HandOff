@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -44,6 +44,13 @@
 #pragma mark delegate
 -(BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler
 {
+    NSString *firendID = [userActivity.userInfo objectForKey:@"kCSSearchableItemActivityIdentifier"];
+
+    UINavigationController *navigationController = (UINavigationController *)[self.window rootViewController];
+    [navigationController popToRootViewControllerAnimated:NO];
+    
+    ViewController *controller = (ViewController *)navigationController.viewControllers.firstObject;
+    [controller showDetailWithName:firendID];
     
     return YES;
 }
