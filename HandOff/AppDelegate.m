@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 @interface AppDelegate ()
-
+{
+    UIApplicationShortcutItem *launchedShortcutItem;
+}
 @end
 
 @implementation AppDelegate
@@ -17,7 +19,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    return YES;
+    
+    BOOL shouldPerformAdditionalDelegateHandling = YES;
+    
+    UIApplicationShortcutItem *shortcutItem = [launchOptions objectForKey:UIApplicationLaunchOptionsShortcutItemKey];
+    NSLog(@"启动事件%@",launchOptions);
+    if (shortcutItem == nil) {
+        launchedShortcutItem = shortcutItem;
+        
+        // This will block "performActionForShortcutItem:completionHandler" from being called.
+
+        shouldPerformAdditionalDelegateHandling = NO;
+    }
+    
+    
+    NSMutableArray *shortcutItems = [application.shortcutItems mutableCopy];
+    for (int i = 0; i < 4; i++)
+    {
+        UIMutableApplicationShortcutItem *shoutItem = [[UIMutableApplicationShortcutItem alloc] initWithType:[[NSBundle mainBundle] bundleIdentifier] localizedTitle:@"title" localizedSubtitle:@"subtitle" icon:[UIApplicationShortcutIcon iconWithType:(UIApplicationShortcutIconTypePlay)] userInfo:@{@"123":@"key"}];
+        
+        [shortcutItems addObject:shoutItem];
+    }
+    
+    application.shortcutItems = shortcutItems.copy;
+    
+    return shouldPerformAdditionalDelegateHandling;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -53,5 +79,12 @@
     [controller showDetailWithName:firendID];
     
     return YES;
+}
+#pragma mark 3D touch
+-(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    NSDictionary *dict = [shortcutItem userInfo];
+    NSLog(@"点击事件%@",dict);
+    completionHandler(shortcutItem);
 }
 @end
